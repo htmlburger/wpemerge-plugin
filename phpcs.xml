@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="MyApp">
+	<description>Plugin Coding Standard</description>
+
+	<exclude-pattern>app/src</exclude-pattern>
+	<exclude-pattern>dist</exclude-pattern>
+	<exclude-pattern>node_modules</exclude-pattern>
+	<exclude-pattern>resources</exclude-pattern>
+	<exclude-pattern>tests</exclude-pattern>
+	<exclude-pattern>vendor</exclude-pattern>
+
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter" />
+	<rule ref="Generic.Commenting.Todo" />
+	<rule ref="Squiz.WhiteSpace.SuperfluousWhitespace" />
+
+	<rule ref="WordPress">
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+		<exclude name="Squiz.PHP.CommentedOutCode.Found" />
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="string" value="myapp" />
+		</properties>
+	</rule>
+
+	<rule ref="WordPress-Extra" />
+	<rule ref="WordPress-Docs" />
+</ruleset>

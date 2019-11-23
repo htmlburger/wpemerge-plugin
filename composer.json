@@ -1,0 +1,52 @@
+{
+  "name": "htmlburger/wpemerge-plugin",
+  "version": "0.15.1",
+  "description": "A modern WordPress starter plugin which uses the WP Emerge framework",
+  "type": "wordpress-plugin",
+  "keywords": ["wordpress", "plugin", "starter plugin", "wpemerge"],
+  "license": "GPL-2.0-only",
+  "homepage": "https://wpemerge.com/",
+  "authors": [
+    {
+      "name": "Atanas Angelov",
+      "email": "atanas.angelov.dev@gmail.com",
+      "homepage": "https://github.com/atanas-angelov-dev/",
+      "role": "Developer"
+    },
+    {
+      "name": "htmlBurger",
+      "email": "info@htmlburger.com",
+      "homepage": "http://htmlburger.com/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.5",
+    "composer/installers": "^1.4",
+    "htmlburger/wpemerge": "~0.15.0",
+    "htmlburger/wpemerge-app-core": "~0.15.0"
+  },
+  "require-dev": {
+    "filp/whoops": "^2.2",
+    "htmlburger/wpemerge-cli": "~0.15.0",
+    "symfony/debug": "~3.0",
+    "wp-coding-standards/wpcs": "^2.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyApp\\": "app/src/"
+    }
+  },
+  "scripts": {
+    "install-test-env": [
+      "wpemerge config:create"
+    ],
+    "post-create-project-cmd": [
+      "wpemerge config:create",
+      "wpemerge install:dependencies",
+      "wpemerge assets:build",
+      "wpemerge install"
+    ]
+  }
+}
