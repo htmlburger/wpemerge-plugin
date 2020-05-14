@@ -122,7 +122,7 @@ return [
 	 */
 	'app_core'            => [
 		'path' => dirname( __DIR__ ),
-		'url'  => plugin_dir_url( MYAPP_PLUGIN_FILE ),
+		'url'  => plugin_dir_url( MY_APP_PLUGIN_FILE ),
 	],
 
 	/**

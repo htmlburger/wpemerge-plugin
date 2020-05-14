@@ -20,8 +20,8 @@ class PluginServiceProvider implements ServiceProviderInterface
 	 * {@inheritDoc}
 	 */
 	public function bootstrap( $container ) {
-		register_activation_hook( MYAPP_PLUGIN_FILE, [$this, 'activate'] );
-		register_deactivation_hook( MYAPP_PLUGIN_FILE, [$this, 'deactivate'] );
+		register_activation_hook( MY_APP_PLUGIN_FILE, [$this, 'activate'] );
+		register_deactivation_hook( MY_APP_PLUGIN_FILE, [$this, 'deactivate'] );
 
 		add_action( 'plugins_loaded', [$this, 'loadTextdomain'] );
 	}
@@ -50,6 +50,6 @@ class PluginServiceProvider implements ServiceProviderInterface
 	 * @return void
 	 */
 	public function loadTextdomain() {
-		load_plugin_textdomain( 'myapp', false, basename( dirname( MYAPP_PLUGIN_FILE ) ) . DIRECTORY_SEPARATOR . 'languages' );
+		load_plugin_textdomain( 'my_app', false, basename( dirname( MY_APP_PLUGIN_FILE ) ) . DIRECTORY_SEPARATOR . 'languages' );
 	}
 }

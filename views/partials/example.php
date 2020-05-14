@@ -6,6 +6,6 @@
  */
 
 ?>
-<div class="myapp__partial">
+<div class="my_app__partial">
 	<?php echo esc_html( $message ); ?>
 </div>

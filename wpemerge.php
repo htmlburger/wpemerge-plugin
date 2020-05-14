@@ -10,7 +10,7 @@
  * Author URI: https://atanas.dev/
  * License: GPL-2.0-only
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: myapp
+ * Text Domain: my_app
  * Domain Path: /languages
  *
  * YOU SHOULD NORMALLY NOT NEED TO ADD ANYTHING HERE - any custom functionality unrelated
@@ -28,22 +28,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'version.php';
 
 $name = trim( get_file_data( __FILE__, [ 'Plugin Name' ] )[0] );
-$load = myapp_should_load_wpemerge( $name, '0.15.0', '2.0.0' );
+$load = my_app_should_load_wpemerge( $name, '0.15.0', '2.0.0' );
 
 if ( ! $load ) {
 	// An incompatible WP Emerge version is already loaded - stop further execution.
-	// myapp_should_load_wpemerge() will automatically add an admin notice.
+	// my_app_should_load_wpemerge() will automatically add an admin notice.
 	return;
 }
 
-define( 'MYAPP_PLUGIN_FILE', __FILE__ );
+define( 'MY_APP_PLUGIN_FILE', __FILE__ );
 
 // Load composer dependencies.
 if ( file_exists( __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php' ) ) {
 	require_once __DIR__ . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 }
 
-myapp_declare_loaded_wpemerge( $name, 'theme', __FILE__ );
+my_app_declare_loaded_wpemerge( $name, 'theme', __FILE__ );
 
 // Load helpers.
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'MyApp.php';

@@ -8,6 +8,6 @@
  */
 
 ?>
-<div class="myapp__layout">
+<div class="my_app__layout">
 	<?php \MyApp::layoutContent(); ?>
 </div>

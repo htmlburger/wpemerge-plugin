@@ -8,6 +8,6 @@
  */
 
 ?>
-<div class="myapp__view">
-	<?php \MyApp::render( 'partials/example', [ 'message' => __( 'Hello World!', 'myapp' ) ] ); ?>
+<div class="my_app__view">
+	<?php \MyApp::render( 'partials/example', [ 'message' => __( 'Hello World!', 'my_app' ) ] ); ?>
 </div>
