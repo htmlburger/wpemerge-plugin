@@ -1,6 +1,6 @@
 # How to contribute
 
-WP Emerge Plugin is completely open source and we encourage everybody to participate by:
+WP Emerge Starter Plugin is completely open source and we encourage everybody to participate by:
 
 - ⭐ the project on GitHub \([https://github.com/htmlburger/wpemerge-plugin](https://github.com/htmlburger/wpemerge-plugin)\)
 - Posting bug reports \([https://github.com/htmlburger/wpemerge-plugin/issues](https://github.com/htmlburger/wpemerge-plugin/issues)\)
@@ -51,7 +51,7 @@ WP Emerge Plugin is completely open source and we encourage everybody to partici
 7. Answer no to any questions asked during installation.
 8. Ignore any `TTY mode is not supported on Windows platform.` errors.
 9. Make changes to `config.json` if necessary.
-10. Activate the WP Emerge Plugin from your WordPress admin panel.
+10. Activate the WP Emerge Starter Plugin from your WordPress admin panel.
 
 ## Pull Requests
 

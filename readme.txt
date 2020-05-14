@@ -1,4 +1,4 @@
-=== WP Emerge Plugin ===
+=== WP Emerge Starter Plugin ===
 Contributors: atanasangelovdev
 Tags:
 Requires at least: 4.7.0
