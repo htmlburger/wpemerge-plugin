@@ -19,9 +19,9 @@ _This is the WP Emerge Starter Plugin project - for the WP Emerge framework plea
 
 ## Documentation
 
-[http://docs.wpemerge.com/#/starter-plugin/overview](http://docs.wpemerge.com/#/starter-plugin/overview)
+[http://docs.wpemerge.com/#/starter/plugin/overview](http://docs.wpemerge.com/#/starter/plugin/overview)
 
-[http://docs.wpemerge.com/#/starter-plugin/quickstart](http://docs.wpemerge.com/#/starter-plugin/quickstart)
+[http://docs.wpemerge.com/#/starter/plugin/quickstart](http://docs.wpemerge.com/#/starter/plugin/quickstart)
 
 ## Development Team
 
@@ -54,7 +54,7 @@ _² Sage's Controller provides similar functionality but is limited to 1 compose
 
 _³ Timber does not provide a front-end build process so you can implement whatever you prefer._
 
-_Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they can be corrected._ 
+_Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they can be corrected._
 
 ## Features
 - All features from [WP Emerge](https://docs.wpemerge.com/#/framework/overview):
@@ -112,7 +112,8 @@ wp-content/plugins/your-plugin
 │   │   └── ...
 │   ├── config.php            # WP Emerge configuration.
 │   ├── helpers.php           # Require your helper files here.
-│   └── hooks.php             # Register your actions and filters here.
+│   ├── hooks.php             # Register your actions and filters here.
+│   └── version.php           # WP Emerge version handling.
 ├── dist/                     # Bundles, optimized images etc.
 ├── languages/                # Language files.
 ├── resources/
@@ -124,16 +125,16 @@ wp-content/plugins/your-plugin
 │   │   └── frontend/         # Front-end scripts.
 │   ├── styles/
 │   │   ├── admin/            # Administration styles.
-│   │   ├── shared/           # Shared styles.
-│   │   └── frontend/         # Front-end styles.
+│   │   ├── frontend/         # Front-end styles.
+│   │   └── shared/           # Shared styles.
 │   └── vendor/               # Any third-party, non-npm assets.
 ├── vendor/                   # Composer packages.
 ├── views/
 │   ├── layouts/
 │   └── partials/
-├── views-alternatives/       # Views for other engines like Blade.
+├── screenshot-1.png          # Plugin screenshot.
+├── wpemerge                  # WP Emerge CLI shortcut.
 ├── wpemerge.php              # Bootstrap plugin.
-├── screenshot.png            # Plugin screenshot.
 └── ...
 ```
 
