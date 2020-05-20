@@ -3,14 +3,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Emerge Starter Plugin 0.15.0\n"
-"Report-Msgid-Bugs-To: https://wpemerge.com/\n"
-"POT-Creation-Date: 2020-05-13 22:01:52+00:00\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpemerge\n"
+"POT-Creation-Date: 2020-05-20 20:42:11+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Atanas Angelov <hi@atanas.dev>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: node-wp-i18n 1.2.3\n"
+
+#: app/version.php:54
+#. Translators: %1$s = plugin or theme name; %2$s = minimum version number;
+#. %3$s = maximum version number; %4$s plugin or theme name; %5$s loaded
+#. version number.
+msgid ""
+"%1$s requires WP Emerge version >= %2$s and < %3$s but %4$s has already "
+"loaded version %5$s."
+msgstr ""
 
 #: views/example.php:12
 msgid "Hello World!"
