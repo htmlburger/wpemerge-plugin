@@ -51,6 +51,7 @@ Brought to you by [Atanas Angelov](https://atanas.dev/) and the lovely folks at 
 | WP Unit Tests for your classes | ✔                | ✖              | ✖        |
 
 _¹ There are prepared JavaScript files but they are not processed or transpiled in any way._
+
 _² The JavaScript files are only minified - no transpiling is done._
 
 _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they can be corrected._
@@ -94,14 +95,14 @@ _Email any factual inaccuracies to [hi@atanas.dev](mailto:hi@atanas.dev) so they
   WP Emerge does __not__ take over WordPress' routing - it actively works with it. The only exception to this are hardcoded URLs explicitly added by a user.
 - Reinventing WordPress APIs using object-oriented interfaces.
 
-  WP Emerge does not provide alternative APIs for registering post types, taxonomies or the like for little added benefit. Instead, it provides logical and handy places for developers to use said APIs.
+  WP Emerge does not provide alternative APIs for registering post types, taxonomies or the like for little added benefit. Instead, it provides logical and handy places for developers to use core APIs.
 - Using a third party engine by default.
 
   WP Emerge uses PHP by default in the same way WordPress does but with added features. Using a third party engine is entirely optional and requires installing an extension.
 - Include most of Laravel or another framework.
 
-  WP Emerge is lean and tuned for WordPress. While inspired by Laravel, it does not come with any `illuminate/*` package. There are only 2 third party production dependencies:
-  - `pimple/pimple` - The one-file PHP service container.
+  WP Emerge is lean and tuned for WordPress. While inspired by Laravel, it does not come with any `illuminate/*` packages. There are only 2 third party production dependencies:
+  - `pimple/pimple` - The single-file PHP service container.
   - `guzzlehttp/psr7` - A PSR-7 Request and ServerRequest implementation.
 
 ## Requirements
