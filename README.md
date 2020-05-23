@@ -43,7 +43,7 @@ Brought to you by [Atanas Angelov](https://atanas.dev/) and the lovely folks at 
 | Stylesheets                    | SASS + PostCSS   | CSS            | LESS     |
 | JavaScript                     | ES6              | Vanilla         | Vanilla  |
 | Hot reloading                  | ✔                | ✖               | ✖        |
-| Front end, Admin, Editor and Login Bundles | ✔✔✔✔            | ✔✔✖✖¹             | ✔✔✖✖²    |
+| Frontend/Admin/Any Bundle      | ✔✔✔             | ✔✔✖¹           | ✔✔✖²    |
 | Automatic Sprite Generation    | ✔                | ✖              | ✖        |
 | Automatic Cache Busting        | ✔                | ✖              | ✖        |
 | WPCS Linting                   | ✔                | ✖              | ✖        |
