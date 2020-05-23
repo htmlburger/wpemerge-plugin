@@ -22,6 +22,7 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	public function bootstrap( $container ) {
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueueFrontendAssets'] );
 		add_action( 'admin_enqueue_scripts', [$this, 'enqueueAdminAssets'] );
+		add_action( 'wp_footer', [$this, 'loadSvgSprite'] );
 	}
 
 	/**
@@ -77,5 +78,30 @@ class AssetsServiceProvider implements ServiceProviderInterface
 				$style
 			);
 		}
+	}
+
+	/**
+	 * Load SVG sprite.
+	 *
+	 * @return void
+	 */
+	public function loadSvgSprite() {
+		$file_path = implode(
+			DIRECTORY_SEPARATOR,
+			array_filter(
+				[
+					plugin_dir_url( MY_APP_PLUGIN_FILE ),
+					'dist',
+					'images',
+					'sprite.svg'
+				]
+			)
+		);
+
+		if ( ! file_exists( $file_path ) ) {
+			return;
+		}
+
+		readfile( $file_path );
 	}
 }
