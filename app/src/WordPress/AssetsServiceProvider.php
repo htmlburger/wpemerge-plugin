@@ -7,8 +7,14 @@ use WPEmerge\ServiceProviders\ServiceProviderInterface;
 /**
  * Register and enqueues assets.
  */
-class AssetsServiceProvider implements ServiceProviderInterface
-{
+class AssetsServiceProvider implements ServiceProviderInterface {
+	/**
+	 * Filesystem.
+	 *
+	 * @var \WP_Filesystem_Base
+	 */
+	protected $filesystem = null;
+
 	/**
 	 * {@inheritDoc}
 	 */
@@ -20,6 +26,8 @@ class AssetsServiceProvider implements ServiceProviderInterface
 	 * {@inheritDoc}
 	 */
 	public function bootstrap( $container ) {
+		$this->filesystem = $container[ WPEMERGE_APPLICATION_FILESYSTEM_KEY ];
+
 		add_action( 'wp_enqueue_scripts', [$this, 'enqueueFrontendAssets'] );
 		add_action( 'admin_enqueue_scripts', [$this, 'enqueueAdminAssets'] );
 		add_action( 'wp_footer', [$this, 'loadSvgSprite'] );
@@ -90,18 +98,18 @@ class AssetsServiceProvider implements ServiceProviderInterface
 			DIRECTORY_SEPARATOR,
 			array_filter(
 				[
-					plugin_dir_url( MY_APP_PLUGIN_FILE ),
+					get_template_directory(),
 					'dist',
 					'images',
-					'sprite.svg'
+					'sprite.svg',
 				]
 			)
 		);
 
-		if ( ! file_exists( $file_path ) ) {
+		if ( ! $this->filesystem->exists( $file_path ) ) {
 			return;
 		}
 
-		readfile( $file_path );
+		echo $this->filesystem->get_contents( $file_path );
 	}
 }
