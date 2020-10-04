@@ -7,8 +7,7 @@ use WPEmerge\ServiceProviders\ServiceProviderInterface;
 /**
  * Register plugin options.
  */
-class PluginServiceProvider implements ServiceProviderInterface
-{
+class PluginServiceProvider implements ServiceProviderInterface {
 	/**
 	 * {@inheritDoc}
 	 */
