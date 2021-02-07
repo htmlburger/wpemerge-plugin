@@ -1,6 +1,6 @@
 {
   "name": "htmlburger/wpemerge-plugin",
-  "version": "0.16.1",
+  "version": "0.16.2",
   "description": "A modern WordPress starter plugin which uses the WP Emerge framework",
   "type": "wordpress-plugin",
   "keywords": ["wordpress", "plugin", "starter plugin", "wpemerge"],
