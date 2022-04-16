@@ -3,7 +3,7 @@
  * Plugin Name: WP Emerge Starter Plugin
  * Plugin URI: https://wpemerge.com/
  * Description:
- * Version: 0.15.0
+ * Version: 0.17.0
  * Requires at least: 4.7
  * Requires PHP: 5.5.9
  * Author: Atanas Angelov
@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'version.php';
 
 $name = trim( get_file_data( __FILE__, [ 'Plugin Name' ] )[0] );
-$load = my_app_should_load_wpemerge( $name, '0.16.0', '2.0.0' );
+$load = my_app_should_load_wpemerge( $name, '0.17.0', '2.0.0' );
 
 if ( ! $load ) {
 	// An incompatible WP Emerge version is already loaded - stop further execution.
